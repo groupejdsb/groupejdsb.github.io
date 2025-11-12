@@ -1,0 +1,44 @@
+.btn {
+  padding: 1em 1.5em;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: $color-primary;
+  &:hover {
+    box-shadow: 0 0px 15px 0px rgba(black, 0.25);
+    & i {
+      transform: translateX(10px);
+    }
+  }
+
+  & i {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s;
+  }
+
+  &.btn--homepage {
+    display: inline-block;
+    color: white;
+    font-size: 1.2em;
+    padding: 1em 2em;
+    box-shadow: 0 0px 10px 0 rgba(black, 0.25);
+    background: linear-gradient(120deg, $color-primary, #00ddff, $color-primary);
+    background-size: 500%;
+    @media only screen and (max-width: 1024px) {
+      font-size: 1em;
+    }
+    &:hover {
+      animation: glow 10s linear infinite;
+    }
+  }
+
+  &.btn--submit {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

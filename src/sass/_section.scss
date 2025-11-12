@@ -1,0 +1,146 @@
+section {
+  padding: 4em 2em;
+
+  & .separator {
+    &.separator--primary {
+      margin: 2em auto;
+      width: 40%;
+      height: 1px;
+      background-color: $color-primary;
+    }
+
+    $separator--secondary-size: 8px;
+    $separator--secondary-color: #ddd;
+
+    &.separator--secondary {
+      margin: 2em auto;
+      width: $separator--secondary-size;
+      height: $separator--secondary-size;
+      background-color: $separator--secondary-color;
+      position: relative;
+      border-radius: 50%;
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 50%;
+        background-color: $separator--secondary-color;
+      }
+      &::after {
+        transform: translateX(2 * $separator--secondary-size);
+      }
+      &::before {
+        transform: translateX(-2 * $separator--secondary-size);
+      }
+    }
+  }
+
+  & .section__title {
+    & h2 {
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1.7em;
+      font-size: 1.8em;
+    }
+  }
+
+  & .section__content {
+    padding: 0 2em;
+    @include min-width(800px) {
+      padding: 0 5em;
+    }
+    @include min-width(1024px) {
+      padding: 0 10em;
+    }
+    @include min-width(1500px) {
+      padding: 0 20em;
+    }
+
+    & .subsection {
+      & .subtitle {
+        text-transform: uppercase;
+        text-align: center;
+        margin: 1em 0;
+        letter-spacing: 2px;
+      }
+
+      & p {
+        text-align: justify;
+        line-height: 1.6em;
+        margin-bottom: 1em;
+      }
+
+      & .associes {
+        & .associe {
+          padding: 1em 2em;
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
+          margin-bottom: 2em;
+          background-color: #fff;
+          & h4 {
+            text-align: center;
+            letter-spacing: 1px;
+            font-size: 18px;
+            margin-bottom: 3px;
+          }
+
+          & h5 {
+            text-align: center;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      & .properties {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+        @include min-width(600px) {
+          grid-template-columns: 1fr 1fr;
+        }
+        @include min-width(1200px) {
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 2em;
+        }
+
+        & .property {
+          background-color: #f7f7f7;
+          & .thumbnail {
+            & img {
+              display: block;
+              width: 100%;
+            }
+          }
+
+          & .description {
+            padding: 2em 1em 1em 1em;
+
+            & h4 {
+              color: #333;
+              text-transform: uppercase;
+              margin-bottom: 0.5em;
+            }
+
+            & h5 {
+              color: #555;
+              margin-bottom: 0.5em;
+            }
+
+            & .prix {
+              font-size: 20px;
+              color: $color-primary;
+              margin-bottom: 2em;
+            }
+            & a {
+              font-size: 0.8em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

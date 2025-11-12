@@ -1,0 +1,29 @@
+#contact-form {
+  margin-top: 2em;
+  .form-group {
+    margin-bottom: 1em;
+    input,
+    textarea {
+      font-family: "Roboto", sans-serif;
+      display: block;
+      width: 100%;
+      padding: 0.5em;
+      outline: none;
+      border: 2px solid #aaa;
+      font-size: 1.1em;
+      border-radius: 5px;
+      &.invalid {
+        border: 2px solid #a70606;
+      }
+      &.valid {
+        border: 2px solid #06a70e;
+      }
+    }
+    textarea {
+      resize: none;
+    }
+    p.error-field {
+      color: #a70606;
+    }
+  }
+}

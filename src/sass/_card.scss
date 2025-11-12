@@ -1,0 +1,38 @@
+.card {
+  display: block;
+  color: #eee;
+  border-radius: 10px;
+  background-color: transparent;
+  box-shadow: 0 0 10px 0px rgba(black, 0.15);
+
+  & .card-title {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    text-transform: uppercase;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  & .card-body {
+    padding: 1em;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    & a {
+      text-decoration: none;
+      color: $color-primary;
+    }
+  }
+}
+.card-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  margin: 1em;
+}
+
+@media only screen and (max-width: 530px) {
+  .card-group {
+    grid-template-columns: 1fr;
+  }
+}

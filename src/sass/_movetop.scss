@@ -1,0 +1,12 @@
+.move-top {
+  cursor: pointer;
+  color: rgba(black, 0.5);
+  font-size: 3rem;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}

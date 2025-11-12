@@ -1,0 +1,26 @@
+.d-none {
+  display: none;
+}
+.transparent {
+  opacity: 0;
+}
+.t-right {
+  text-align: right;
+}
+.bg-light {
+  background-color: $lighter;
+}
+.bg-white {
+  background-color: white;
+}
+
+.mb-1 {
+  margin-bottom: 1em;
+}
+
+.to-reveal {
+  transition: opacity 1s;
+  transition-delay: 0.3s;
+  // Problème de performance
+  opacity: 1;
+}
